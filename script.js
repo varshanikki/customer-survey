@@ -93,29 +93,7 @@ const getValueFromInput = function () {
   }
   return selectedAnswer;
 };
-/*
-const getValueFromLabel = function () {
-  let selectedAnswer;
-  const answeredQuestionDiv = questions[currentQuestionIndex - 1];
-  const inputList = answeredQuestionDiv.querySelectorAll("input");
-  const labelList = answeredQuestionDiv.querySelectorAll("label");
-  const textArea = answeredQuestionDiv.querySelectorAll("textarea");
 
-  if (labelList.length > 0) {
-    for (let i = 0; i < labelList.length; i++) {
-      console.log("labelList[i]", labelList[i]);
-      if (inputList[i].type === "radio" && inputList[i].checked === true) {
-        console.log("label");
-        selectedAnswer = labelList[i].innerText;
-      }
-    }
-  } else {
-    console.log("textArea", textArea);
-    selectedAnswer = textArea[0].value;
-  }
-  return selectedAnswer;
-};
-*/
 nextBtn.addEventListener("click", function (e) {
   e.preventDefault();
   const selectedAnswer = getValueFromInput();
