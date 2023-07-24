@@ -22,40 +22,6 @@ let currentQuestionIndex = 1;
 let totalNumberOFQues = 5;
 let customerSessionId;
 const surveyData = JSON.parse(localStorage.getItem("surveyData")) || {};
-/*const questionsList = [
-  {
-    qno: 1,
-    question: "How satisfied are you with our products?",
-    inputType: "radio",
-    numberOfradio: 5,
-  },
-  {
-    qno: 2,
-    question: "How fair are the prices compared to similar retailers?",
-    inputType: "radio",
-    numberOfradio: 5,
-  },
-  {
-    qno: 3,
-    question:
-      "How satisfied are you with the value for money of your purchase?",
-    inputType: "radio",
-    numberOfradio: 5,
-  },
-  {
-    qno: 4,
-    question:
-      "On a scale of 1-10 how would you recommend us to your friends and family?",
-    inputType: "radio",
-    numberOfradio: 10,
-  },
-  {
-    qno: 5,
-    question: "What could we do to improve our service?",
-    inputType: "text",
-    numberOfradio: null,
-  },
-];*/
 
 btnStart.addEventListener("click", function (e) {
   e.preventDefault();
