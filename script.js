@@ -21,7 +21,6 @@ const thankyou = document.querySelector(".thank-you-screen");
 let currentQuestionIndex = 1;
 let totalNumberOFQues = 5;
 let customerSessionId;
-const surveyData = JSON.parse(localStorage.getItem("surveyData")) || {};
 
 btnStart.addEventListener("click", function (e) {
   e.preventDefault();
@@ -34,12 +33,11 @@ btnStart.addEventListener("click", function (e) {
 
 const displayQuestion = function (index) {
   if (index > totalNumberOFQues) {
-    // If the survey is completed, show a thank you message or redirect to another page
     surveyContainer.style.display = "none";
-    // document.getElementById("thankYouMessage").style.display = "block";
+
     return;
   }
-  console.log("welcome", currentQuestionIndex, questions[1]);
+
   for (let i = 0; i < questions.length; i++) {
     questions[i].style.display = "none";
   }
@@ -140,8 +138,6 @@ form.addEventListener("submit", function (event) {
     document.querySelector(".welcome-block").classList.add("hidden");
 
     setTimeout(function () {
-      //document.querySelector(".thank-you-screen").classList.add("hidden");
-      //document.querySelector(".welcome-block").classList.remove("hidden");
       thankyou.style.display = "none";
       welcomeBlock.style.display = "block";
       currentQuestionIndex = 1;
